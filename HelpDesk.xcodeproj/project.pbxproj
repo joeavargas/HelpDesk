@@ -16,6 +16,9 @@
 		E3741A9F2BE4055E00697F5F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E3741A9E2BE4055E00697F5F /* FirebaseFirestore */; };
 		E3741AA12BE4055E00697F5F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3741AA02BE4055E00697F5F /* FirebaseFirestoreSwift */; };
 		E3741AA32BE4055E00697F5F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E3741AA22BE4055E00697F5F /* FirebaseStorage */; };
+		E3741AA72BE4264800697F5F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AA62BE4264800697F5F /* LoginViewModel.swift */; };
+		E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AA82BE4265300697F5F /* RegistrationViewModel.swift */; };
+		E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AAA2BE426AA00697F5F /* AuthService.swift */; };
 		E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */; };
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		E3741A942BE3F8C900697F5F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E3741A972BE3F8F700697F5F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		E3741A992BE4041B00697F5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3741AA62BE4264800697F5F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E3741AA82BE4265300697F5F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		E3741AAA2BE426AA00697F5F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E3B87C812BE3EAA2009A6DFD /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,10 +85,37 @@
 		E3741A932BE3F8B600697F5F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E3741AA52BE4263200697F5F /* Service */,
+				E3741AA42BE4262500697F5F /* ViewModel */,
+				E3741AAC2BE427AC00697F5F /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E3741AA42BE4262500697F5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3741AA62BE4264800697F5F /* LoginViewModel.swift */,
+				E3741AA82BE4265300697F5F /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E3741AA52BE4263200697F5F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E3741AAA2BE426AA00697F5F /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E3741AAC2BE427AC00697F5F /* View */ = {
+			isa = PBXGroup;
+			children = (
 				E3741A942BE3F8C900697F5F /* LoginView.swift */,
 				E3741A972BE3F8F700697F5F /* RegistrationView.swift */,
 			);
-			path = Authentication;
+			path = View;
 			sourceTree = "<group>";
 		};
 		E3B87C782BE3EAA2009A6DFD = {
@@ -205,9 +238,12 @@
 				E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */,
 				E3741A902BE3EF5700697F5F /* User.swift in Sources */,
 				E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */,
+				E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */,
 				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
 				E3741A982BE3F8F700697F5F /* RegistrationView.swift in Sources */,
+				E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */,
 				E3741A922BE3EF9700697F5F /* Ticket.swift in Sources */,
+				E3741AA72BE4264800697F5F /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
