@@ -32,6 +32,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3741A8A2BE3EBBE00697F5F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E3741A8B2BE3EBCC00697F5F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E3B87C862BE3EAA2009A6DFD /* ContentView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E3741A8C2BE3EBF000697F5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E3B87C782BE3EAA2009A6DFD = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +74,9 @@
 		E3B87C832BE3EAA2009A6DFD /* HelpDesk */ = {
 			isa = PBXGroup;
 			children = (
-				E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */,
-				E3B87C862BE3EAA2009A6DFD /* ContentView.swift */,
+				E3741A8A2BE3EBBE00697F5F /* App */,
+				E3741A8C2BE3EBF000697F5F /* Model */,
+				E3741A8B2BE3EBCC00697F5F /* Scenes */,
 				E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */,
 				E3B87C8A2BE3EAA5009A6DFD /* Preview Content */,
 			);
