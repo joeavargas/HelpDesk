@@ -19,6 +19,8 @@
 		E3741AA72BE4264800697F5F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AA62BE4264800697F5F /* LoginViewModel.swift */; };
 		E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AA82BE4265300697F5F /* RegistrationViewModel.swift */; };
 		E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AAA2BE426AA00697F5F /* AuthService.swift */; };
+		E3741AAF2BE42D0A00697F5F /* MainTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AAE2BE42D0A00697F5F /* MainTicketView.swift */; };
+		E3741AB42BE42F1800697F5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AB32BE42F1800697F5F /* ContentViewModel.swift */; };
 		E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */; };
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		E3741AA62BE4264800697F5F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E3741AA82BE4265300697F5F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		E3741AAA2BE426AA00697F5F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E3741AAE2BE42D0A00697F5F /* MainTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTicketView.swift; sourceTree = "<group>"; };
+		E3741AB32BE42F1800697F5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E3B87C812BE3EAA2009A6DFD /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,8 +71,9 @@
 		E3741A8B2BE3EBCC00697F5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E3741AB02BE42ECD00697F5F /* Root */,
+				E3741AAD2BE42CDC00697F5F /* Ticket */,
 				E3741A932BE3F8B600697F5F /* Authentication */,
-				E3B87C862BE3EAA2009A6DFD /* ContentView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -116,6 +121,39 @@
 				E3741A972BE3F8F700697F5F /* RegistrationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E3741AAD2BE42CDC00697F5F /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				E3741AAE2BE42D0A00697F5F /* MainTicketView.swift */,
+			);
+			path = Ticket;
+			sourceTree = "<group>";
+		};
+		E3741AB02BE42ECD00697F5F /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E3741AB12BE42EE400697F5F /* VIew */,
+				E3741AB22BE42EF100697F5F /* ViewModel */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E3741AB12BE42EE400697F5F /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				E3B87C862BE3EAA2009A6DFD /* ContentView.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		E3741AB22BE42EF100697F5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3741AB32BE42F1800697F5F /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E3B87C782BE3EAA2009A6DFD = {
@@ -242,8 +280,10 @@
 				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
 				E3741A982BE3F8F700697F5F /* RegistrationView.swift in Sources */,
 				E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */,
+				E3741AB42BE42F1800697F5F /* ContentViewModel.swift in Sources */,
 				E3741A922BE3EF9700697F5F /* Ticket.swift in Sources */,
 				E3741AA72BE4264800697F5F /* LoginViewModel.swift in Sources */,
+				E3741AAF2BE42D0A00697F5F /* MainTicketView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
