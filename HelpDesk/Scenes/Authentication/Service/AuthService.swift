@@ -16,7 +16,7 @@ class AuthService {
     
     init() {
         self.userSession = Auth.auth().currentUser
-        
+        Task { try await UserService.shared.fetchCurrentUser() }
         print("DEBUG: user session id is \(userSession?.uid)")
     }
     

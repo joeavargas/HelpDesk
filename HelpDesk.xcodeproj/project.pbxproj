@@ -22,6 +22,7 @@
 		E3741AAF2BE42D0A00697F5F /* MainTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AAE2BE42D0A00697F5F /* MainTicketView.swift */; };
 		E3741AB42BE42F1800697F5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AB32BE42F1800697F5F /* ContentViewModel.swift */; };
 		E3741AB82BE4334000697F5F /* MainTicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AB72BE4334000697F5F /* MainTicketViewModel.swift */; };
+		E3741ABA2BE44ACD00697F5F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AB92BE44ACD00697F5F /* UserService.swift */; };
 		E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */; };
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		E3741AAE2BE42D0A00697F5F /* MainTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTicketView.swift; sourceTree = "<group>"; };
 		E3741AB32BE42F1800697F5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E3741AB72BE4334000697F5F /* MainTicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTicketViewModel.swift; sourceTree = "<group>"; };
+		E3741AB92BE44ACD00697F5F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E3B87C812BE3EAA2009A6DFD /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E3741AAA2BE426AA00697F5F /* AuthService.swift */,
+				E3741AB92BE44ACD00697F5F /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */,
 				E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */,
 				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
+				E3741ABA2BE44ACD00697F5F /* UserService.swift in Sources */,
 				E3741A982BE3F8F700697F5F /* RegistrationView.swift in Sources */,
 				E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */,
 				E3741AB42BE42F1800697F5F /* ContentViewModel.swift in Sources */,
