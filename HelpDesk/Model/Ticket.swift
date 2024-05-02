@@ -14,5 +14,5 @@ struct Ticket: Codable {
     let description: String
     let dateCreated: Date
     let dueDate: Date?
-    let createdBy: Profile
+    let createdBy: User
 }
