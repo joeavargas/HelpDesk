@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+@MainActor
 class AuthService {
     @Published var userSession: FirebaseAuth.User?
     static let shared = AuthService()
@@ -19,7 +20,6 @@ class AuthService {
         print("DEBUG: user session id is \(userSession?.uid)")
     }
     
-    @MainActor
     func login(withEmail email: String, password: String) async throws {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
@@ -29,7 +29,6 @@ class AuthService {
         }
     }
     
-    @MainActor
     func createUser(withEmail email: String, firstName: String, lastName: String,  password: String, isAgent: Bool) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
