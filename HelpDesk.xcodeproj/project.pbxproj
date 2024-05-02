@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E3741A902BE3EF5700697F5F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741A8F2BE3EF5700697F5F /* User.swift */; };
 		E3741A922BE3EF9700697F5F /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741A912BE3EF9700697F5F /* Ticket.swift */; };
+		E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741A942BE3F8C900697F5F /* LoginView.swift */; };
+		E3741A982BE3F8F700697F5F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741A972BE3F8F700697F5F /* SignUpView.swift */; };
 		E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */; };
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		E3741A8F2BE3EF5700697F5F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E3741A912BE3EF9700697F5F /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		E3741A942BE3F8C900697F5F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E3741A972BE3F8F700697F5F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E3B87C812BE3EAA2009A6DFD /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 		E3741A8B2BE3EBCC00697F5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E3741A932BE3F8B600697F5F /* Authentication */,
 				E3B87C862BE3EAA2009A6DFD /* ContentView.swift */,
 			);
 			path = Scenes;
@@ -59,6 +64,15 @@
 				E3741A912BE3EF9700697F5F /* Ticket.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E3741A932BE3F8B600697F5F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E3741A942BE3F8C900697F5F /* LoginView.swift */,
+				E3741A972BE3F8F700697F5F /* SignUpView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		E3B87C782BE3EAA2009A6DFD = {
@@ -170,6 +184,8 @@
 				E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */,
 				E3741A902BE3EF5700697F5F /* User.swift in Sources */,
 				E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */,
+				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
+				E3741A982BE3F8F700697F5F /* SignUpView.swift in Sources */,
 				E3741A922BE3EF9700697F5F /* Ticket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
