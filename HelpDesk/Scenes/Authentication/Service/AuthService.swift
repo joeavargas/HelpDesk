@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
 
 class AuthService {
     @Published var userSession: FirebaseAuth.User?
@@ -18,6 +19,7 @@ class AuthService {
         print("DEBUG: user session id is \(userSession?.uid)")
     }
     
+    @MainActor
     func login(withEmail email: String, password: String) async throws {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
@@ -27,10 +29,12 @@ class AuthService {
         }
     }
     
-    func createUser(withEmail email: String, firstName: String, lastName: String,  password: String) async throws {
+    @MainActor
+    func createUser(withEmail email: String, firstName: String, lastName: String,  password: String, isAgent: Bool) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
+            try await self.uploadUserData(email: email, firstName: firstName, lastName: lastName, id: result.user.uid, isAgent: isAgent)
         } catch {
             print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
         }
@@ -43,5 +47,12 @@ class AuthService {
         } catch {
             print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
+    }
+    
+    private func uploadUserData(email: String, firstName: String, lastName: String, id: String, isAgent: Bool) async throws {
+        let user = User(firstName: firstName, lastName: lastName, isAgent: isAgent)
+        guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
+        
+        try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
     }
 }

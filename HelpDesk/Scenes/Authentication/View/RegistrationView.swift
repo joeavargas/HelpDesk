@@ -58,6 +58,9 @@ struct RegistrationView: View {
                         RoundedRectangle(cornerRadius: 10)
                     )
                     .padding(.horizontal, 24)
+                
+                Toggle("Agent?", isOn: $viewModel.isAgent)
+                    .padding(.horizontal)
             }
             
             Button {

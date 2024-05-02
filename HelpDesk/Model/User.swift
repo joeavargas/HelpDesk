@@ -6,13 +6,22 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
-struct User: Codable {
-    var userId = UUID().uuidString
+struct User: Codable, Identifiable, Hashable {
+    @DocumentID var uid: String?
     let firstName: String
     let lastName: String
+    let isAgent: Bool
+}
+
+extension User {
+    
+    var id: String {
+        return uid ?? NSUUID().uuidString
+    }
+    
     var displayName: String {
         return firstName + " " + lastName
     }
-    let isAgent: Bool
 }
