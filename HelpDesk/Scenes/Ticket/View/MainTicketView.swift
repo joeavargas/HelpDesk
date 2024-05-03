@@ -16,22 +16,6 @@ struct MainTicketView: View {
         NavigationStack {
             VStack {
                 Text("MainTicketView")
-                Button {
-                    Task {
-                        try await viewModel.signOut()
-                    }
-                } label: {
-                    Text("Sign Out")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .frame(width: 360, height: 44)
-                        .background(Color(.red))
-                        .clipShape(
-                            RoundedRectangle(cornerRadius: 10)
-                        )
-                }
-                .padding(.vertical)
             }
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -40,7 +24,7 @@ struct MainTicketView: View {
                     }
                     
                 }
-        }
+            }
         }
     }
 }

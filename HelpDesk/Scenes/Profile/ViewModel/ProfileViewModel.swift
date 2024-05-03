@@ -23,4 +23,8 @@ class ProfileViewModel: ObservableObject {
             self?.currentUser = user
         }.store(in: &cancellables)
     }
+    
+    func signOut() async throws {
+        await AuthService.shared.signOut()
+    }
 }
