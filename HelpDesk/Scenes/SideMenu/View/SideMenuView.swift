@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SideMenuView: View {
+    @StateObject var viewModel = SideMenuViewModel()
     @Binding var selectedSideMenuTab: Int
     @Binding var presentSideMenu: Bool
     
@@ -21,9 +22,11 @@ struct SideMenuView: View {
                     .shadow(color: .purple.opacity(0.1), radius: 5, x: 0, y: 3)
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    ProfileImageView()
-                        .frame(height: 140)
-                        .padding(.bottom, 30)
+                    if let currentUser = viewModel.currentUser {
+                        ProfileImageView(user: currentUser)
+                            .frame(height: 140)
+                            .padding(.bottom, 30)
+                    }
                     
                     ForEach(SideMenuRowType.allCases, id: \.self) { row in
                         RowView(isSelected: selectedSideMenuTab == row.rawValue, imageName: row.iconName, title: row.title) {
@@ -44,7 +47,7 @@ struct SideMenuView: View {
         .background(.clear)
     }
     
-    func ProfileImageView() -> some View{
+    func ProfileImageView(user: User) -> some View{
             VStack(alignment: .center){
                 HStack{
                     Spacer()
@@ -60,11 +63,11 @@ struct SideMenuView: View {
                     Spacer()
                 }
                 
-                Text("Joe Vargas")
+                Text(user.displayName)
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.black)
                 
-                Text("iOS Developer")
+                Text("\(user.isAgent ? "Agent" : "Client")")
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundColor(.black.opacity(0.5))
             }
