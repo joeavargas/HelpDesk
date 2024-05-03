@@ -9,10 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var email = ""
-    @State private var password = ""
-    @State private var firstName = ""
-    @State private var lastName = ""
+    @StateObject var viewModel = RegistrationViewModel()
     
     var body: some View {
         VStack {
@@ -26,7 +23,7 @@ struct RegistrationView: View {
             
             // TextFields
             VStack(spacing: 12) {
-                TextField("Enter your email", text: $email)
+                TextField("Enter your email", text: $viewModel.email)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -35,7 +32,7 @@ struct RegistrationView: View {
                     )
                     .padding(.horizontal, 24)
                 
-                TextField("First Name", text: $firstName)
+                TextField("First Name", text: $viewModel.firstName)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -44,7 +41,7 @@ struct RegistrationView: View {
                     )
                     .padding(.horizontal, 24)
                 
-                TextField("Last Name", text: $lastName)
+                TextField("Last Name", text: $viewModel.lastName)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -53,7 +50,7 @@ struct RegistrationView: View {
                     )
                     .padding(.horizontal, 24)
                 
-                SecureField("Enter your password", text: $password)
+                SecureField("Enter your password", text: $viewModel.password)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -61,10 +58,15 @@ struct RegistrationView: View {
                         RoundedRectangle(cornerRadius: 10)
                     )
                     .padding(.horizontal, 24)
+                
+                Toggle("Agent?", isOn: $viewModel.isAgent)
+                    .padding(.horizontal)
             }
             
             Button {
-                print("DEBUG: handle sign up")
+                Task {
+                    try await viewModel.createUser()
+                }
             } label: {
                 Text("Sign Up")
                     .font(.subheadline)
