@@ -11,11 +11,15 @@ struct CreateTicketView: View {
     @State private var titleText = ""
     @State private var ticketDescription = ""
     @State private var dueDate = Date.now
+    @State private var isSubmitButtonEnabled: Bool = false
     
     var body: some View {
         List {
             Section {
                 TextField("Enter a brief desciption", text: $titleText)
+                    .onChange(of: titleText) { _, newValue in
+                        updateSubmitButtonState()
+                    }
             } header: {
                 HStack {
                     Text("Title")
@@ -27,6 +31,9 @@ struct CreateTicketView: View {
             
             Section {
                 TextField("Enter description", text: $ticketDescription)
+                    .onChange(of: ticketDescription) { _, newValue in
+                        updateSubmitButtonState()
+                    }
             } header: {
                 HStack {
                     Text("Description")
@@ -63,8 +70,13 @@ struct CreateTicketView: View {
                 .buttonStyle(.plain)
                 .listRowBackground(EmptyView())
                 .listRowInsets(EdgeInsets())
+                .disabled(!isSubmitButtonEnabled)
             }
         }
+    }
+    
+    private func updateSubmitButtonState() {
+        isSubmitButtonEnabled = !titleText.isEmpty && !ticketDescription.isEmpty
     }
 }
 
