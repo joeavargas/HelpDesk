@@ -9,26 +9,18 @@ import SwiftUI
 
 struct MainTicketView: View {
     @StateObject var viewModel = MainTicketViewModel()
-    @Binding var presentSideMenu: Bool
-    @State var selectedSideMenuTab = 0
+    @State private var showMenu = false
+    @State private var selectedTab = 0
     
     var body: some View {
         NavigationStack {
             VStack {
                 Text("MainTicketView")
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button("Sidemenu") {
-                        presentSideMenu.toggle()
-                    }
-                    
-                }
-            }
         }
     }
 }
 
 #Preview {
-    MainTicketView(presentSideMenu: .constant(true))
+    MainTicketView()
 }

@@ -7,15 +7,15 @@
 
 import Foundation
 
-enum SideMenuRowType: Int, CaseIterable {
-    case home = 0
+enum SideMenuOptionModel: Int, CaseIterable {
+    case tickets = 0
     case favorite
     case profile
     
     var title: String {
         switch self {
             
-        case .home:
+        case .tickets:
             return "Tickets"
         case .favorite:
             return "Favorite"
@@ -27,12 +27,16 @@ enum SideMenuRowType: Int, CaseIterable {
     var iconName: String {
         switch self {
             
-        case .home:
-            return "home"
+        case .tickets:
+            return "ticket.fill"
         case .favorite:
-            return "favorite"
+            return "heart.fill"
         case .profile:
-            return "profile"
+            return "person.circle.fill"
         }
     }
+}
+
+extension SideMenuOptionModel: Identifiable {
+    var id: Int { return self.rawValue } 
 }
