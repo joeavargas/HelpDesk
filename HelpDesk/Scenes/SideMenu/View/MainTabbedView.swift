@@ -9,24 +9,35 @@ import SwiftUI
 
 struct MainTabbedView: View {
     
-    @State var presentSideMenu = false
-    @State var selectedSideMenuTab = 0
+    @State var showMenu = false
+    @State var selectedTab = 0
     
     var body: some View {
-        ZStack {
-            TabView(selection: $selectedSideMenuTab) {
-                MainTicketView(presentSideMenu: $presentSideMenu)
-                    .tag(0)
+        NavigationStack {
+            ZStack {
+                TabView(selection: $selectedTab) {
+                    MainTicketView()
+                        .tag(0)
+                    
+                    FavoriteView(presentSideMenu: $showMenu)
+                        .tag(1)
+                    
+                    ProfileView(presentSideMenu: $showMenu)
+                        .tag(2)
+                }
                 
-                FavoriteView(presentSideMenu: $presentSideMenu)
-                    .tag(1)
-                
-                ProfileView(presentSideMenu: $presentSideMenu)
-                    .tag(2)
+                SideMenuView(isShowing: $showMenu, selectedTab: $selectedTab)
             }
-            
-            SideMenu(isShowing: $presentSideMenu,
-                     content: AnyView(SideMenuView(selectedSideMenuTab: $selectedSideMenuTab, presentSideMenu: $presentSideMenu)))
+            .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {
+                        showMenu.toggle()
+                    }, label: {
+                        Image(systemName: "line.3.horizontal")
+                    })
+                }
+            }
         }
     }
 }
