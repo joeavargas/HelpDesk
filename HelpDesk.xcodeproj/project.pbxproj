@@ -32,6 +32,7 @@
 		E3741AD12BE58C1800697F5F /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AD02BE58C1800697F5F /* SideMenuViewModel.swift */; };
 		E3741AD32BE5ED9800697F5F /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AD22BE5ED9800697F5F /* SideMenuHeaderView.swift */; };
 		E3741AD52BE5F1D400697F5F /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3741AD42BE5F1D400697F5F /* SideMenuRowView.swift */; };
+		E386E8332BE6BF3F0008EBE7 /* CreateTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E386E8322BE6BF3F0008EBE7 /* CreateTicketView.swift */; };
 		E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */; };
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		E3741AD02BE58C1800697F5F /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		E3741AD22BE5ED9800697F5F /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		E3741AD42BE5F1D400697F5F /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		E386E8322BE6BF3F0008EBE7 /* CreateTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketView.swift; sourceTree = "<group>"; };
 		E3B87C812BE3EAA2009A6DFD /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B87C842BE3EAA2009A6DFD /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		E3741A8B2BE3EBCC00697F5F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E386E82F2BE6BF090008EBE7 /* CreateTicket */,
 				E3741AAD2BE42CDC00697F5F /* Ticket */,
 				E3741AC62BE5812B00697F5F /* Favorite */,
 				E3741AC92BE5818200697F5F /* Profile */,
@@ -261,6 +264,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E386E82F2BE6BF090008EBE7 /* CreateTicket */ = {
+			isa = PBXGroup;
+			children = (
+				E386E8312BE6BF200008EBE7 /* View */,
+				E386E8302BE6BF160008EBE7 /* ViewModel */,
+			);
+			path = CreateTicket;
+			sourceTree = "<group>";
+		};
+		E386E8302BE6BF160008EBE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E386E8312BE6BF200008EBE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E386E8322BE6BF3F0008EBE7 /* CreateTicketView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E3B87C782BE3EAA2009A6DFD = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +422,7 @@
 				E3741AA92BE4265300697F5F /* RegistrationViewModel.swift in Sources */,
 				E3741ACD2BE587E400697F5F /* ProfileViewModel.swift in Sources */,
 				E3741AB42BE42F1800697F5F /* ContentViewModel.swift in Sources */,
+				E386E8332BE6BF3F0008EBE7 /* CreateTicketView.swift in Sources */,
 				E3741AD52BE5F1D400697F5F /* SideMenuRowView.swift in Sources */,
 				E3741A922BE3EF9700697F5F /* Ticket.swift in Sources */,
 				E3741AA72BE4264800697F5F /* LoginViewModel.swift in Sources */,
