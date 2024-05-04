@@ -12,6 +12,8 @@ struct MainTabView: View {
     @State var showMenu = false
     @State var selectedTab = 0
     
+    @State private var showCreateTicketSheet = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -54,11 +56,16 @@ struct MainTabView: View {
                     ToolbarItem(placement: .bottomBar) {
                         Button(action: {
                             print("DEBUG: create ticket")
+                            showCreateTicketSheet.toggle()
                         }, label: {
                             Image(systemName: "plus")
                         })
                     }
                 }
+            }
+            .sheet(isPresented: $showCreateTicketSheet) {
+                CreateTicketView()
+                    .presentationDragIndicator(.visible)
             }
         }
     }

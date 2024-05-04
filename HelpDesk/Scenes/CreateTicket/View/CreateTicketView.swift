@@ -8,70 +8,80 @@
 import SwiftUI
 
 struct CreateTicketView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var titleText = ""
     @State private var ticketDescription = ""
     @State private var dueDate = Date.now
     @State private var isSubmitButtonEnabled: Bool = false
     
     var body: some View {
-        List {
-            Section {
-                TextField("Enter a brief desciption", text: $titleText)
-                    .onChange(of: titleText) { _, newValue in
-                        updateSubmitButtonState()
+        NavigationStack {
+            List {
+                Section {
+                    TextField("Enter a brief desciption", text: $titleText)
+                        .onChange(of: titleText) { _, newValue in
+                            updateSubmitButtonState()
+                        }
+                } header: {
+                    HStack {
+                        Text("Title")
+                        Text("*")
+                            .foregroundStyle(.red)
                     }
-            } header: {
-                HStack {
-                    Text("Title")
-                    Text("*")
-                        .foregroundStyle(.red)
+                    .font(.subheadline)
                 }
-                .font(.subheadline)
-            }
-            
-            Section {
-                TextField("Enter description", text: $ticketDescription)
-                    .onChange(of: ticketDescription) { _, newValue in
-                        updateSubmitButtonState()
+                
+                Section {
+                    TextField("Enter description", text: $ticketDescription)
+                        .onChange(of: ticketDescription) { _, newValue in
+                            updateSubmitButtonState()
+                        }
+                } header: {
+                    HStack {
+                        Text("Description")
+                        Text("*")
+                            .foregroundStyle(.red)
                     }
-            } header: {
-                HStack {
-                    Text("Description")
-                    Text("*")
-                        .foregroundStyle(.red)
+                    .font(.subheadline)
                 }
-                .font(.subheadline)
-            }
-            
-            Section {
-                DatePicker("Due Date", selection: $dueDate, in: Date.now...)
-            } header: {
-                HStack {
-                    Text("(optional)")
+                
+                Section {
+                    DatePicker("Due Date", selection: $dueDate, in: Date.now...)
+                } header: {
+                    HStack {
+                        Text("(optional)")
+                    }
+                    .font(.subheadline)
                 }
-                .font(.subheadline)
-            }
-            
-            Section {
-                Button(action: {}){
-                    Button(action: {
-                        print("DEBUG: submit ticket")
-                    }, label: {
-                        Text("Submit")
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 30)
+                
+                Section {
+                    Button(action: {}){
+                        Button(action: {
+                            print("DEBUG: submit ticket")
+                        }, label: {
+                            Text("Submit")
+                                .foregroundStyle(.white)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 30)
 
-                    })
-                    .background(.green)
-                    .buttonStyle(.bordered)
-                    
+                        })
+                        .background(.green)
+                        .buttonStyle(.bordered)
+                        
+                    }
+                    .buttonStyle(.plain)
+                    .listRowBackground(EmptyView())
+                    .listRowInsets(EdgeInsets())
+                    .disabled(!isSubmitButtonEnabled)
                 }
-                .buttonStyle(.plain)
-                .listRowBackground(EmptyView())
-                .listRowInsets(EdgeInsets())
-                .disabled(!isSubmitButtonEnabled)
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+        }
         }
     }
     
