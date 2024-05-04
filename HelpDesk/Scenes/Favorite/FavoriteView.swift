@@ -24,6 +24,7 @@ struct FavoriteView: View {
                 }
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

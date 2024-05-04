@@ -18,6 +18,8 @@ struct MainTicketView: View {
                 Text("MainTicketView")
             }
         }
+        .toolbar(.hidden, for: .tabBar)
+        
     }
 }
 
