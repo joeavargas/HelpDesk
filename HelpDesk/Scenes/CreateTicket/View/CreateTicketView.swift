@@ -44,6 +44,26 @@ struct CreateTicketView: View {
                 }
                 .font(.subheadline)
             }
+            
+            Section {
+                Button(action: {}){
+                    Button(action: {
+                        print("DEBUG: submit ticket")
+                    }, label: {
+                        Text("Submit")
+                            .foregroundStyle(.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 30)
+
+                    })
+                    .background(.green)
+                    .buttonStyle(.bordered)
+                    
+                }
+                .buttonStyle(.plain)
+                .listRowBackground(EmptyView())
+                .listRowInsets(EdgeInsets())
+            }
         }
     }
 }
