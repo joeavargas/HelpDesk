@@ -12,6 +12,8 @@ struct MainTabView: View {
     @State var showMenu = false
     @State var selectedTab = 0
     
+    @State private var showCreateTicketSheet = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -44,21 +46,29 @@ struct MainTabView: View {
                 // Only the filter and new ticket buttons should appear in the MainTicketView
                 if selectedTab == 0 {
                     ToolbarItem(placement: .bottomBar) {
-                        Button(action: {
-                            print("DEBUG: filter tickets")
-                        }, label: {
-                            Image(systemName: "line.3.horizontal.decrease.circle")
-                        })
-                    }
-                    
-                    ToolbarItem(placement: .bottomBar) {
-                        Button(action: {
-                            print("DEBUG: create ticket")
-                        }, label: {
-                            Image(systemName: "plus")
-                        })
+                        HStack {
+                            Button(action: {
+                                print("DEBUG: filter tickets")
+                            }, label: {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                print("DEBUG: create ticket")
+                                showCreateTicketSheet.toggle()
+                            }, label: {
+                                Image(systemName: "plus")
+                            })
+                        }
+                        .padding(.horizontal)
                     }
                 }
+            }
+            .sheet(isPresented: $showCreateTicketSheet) {
+                CreateTicketView()
+                    .presentationDragIndicator(.visible)
             }
         }
     }
