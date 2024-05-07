@@ -37,6 +37,8 @@
 		E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B87C862BE3EAA2009A6DFD /* ContentView.swift */; };
 		E3B87C892BE3EAA5009A6DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */; };
 		E3B87C8C2BE3EAA5009A6DFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C8B2BE3EAA5009A6DFD /* Preview Assets.xcassets */; };
+		E3D04EAB2BE99D4800ABB22B /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D04EAA2BE99D4800ABB22B /* TicketService.swift */; };
+		E3D04EAD2BE9ADCC00ABB22B /* CreateTicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D04EAC2BE9ADCC00ABB22B /* CreateTicketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		E3B87C862BE3EAA2009A6DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B87C8B2BE3EAA5009A6DFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E3D04EAA2BE99D4800ABB22B /* TicketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
+		E3D04EAC2BE9ADCC00ABB22B /* CreateTicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +122,6 @@
 		E3741A932BE3F8B600697F5F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E3741AA52BE4263200697F5F /* Service */,
 				E3741AA42BE4262500697F5F /* ViewModel */,
 				E3741AAC2BE427AC00697F5F /* View */,
 			);
@@ -139,6 +142,7 @@
 			children = (
 				E3741AAA2BE426AA00697F5F /* AuthService.swift */,
 				E3741AB92BE44ACD00697F5F /* UserService.swift */,
+				E3D04EAA2BE99D4800ABB22B /* TicketService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -276,6 +280,7 @@
 		E386E8302BE6BF160008EBE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E3D04EAC2BE9ADCC00ABB22B /* CreateTicketViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				E3741A8A2BE3EBBE00697F5F /* App */,
 				E3741A8C2BE3EBF000697F5F /* Model */,
 				E3741A8B2BE3EBCC00697F5F /* Scenes */,
+				E3741AA52BE4263200697F5F /* Service */,
 				E3B87C882BE3EAA5009A6DFD /* Assets.xcassets */,
 				E3741A992BE4041B00697F5F /* GoogleService-Info.plist */,
 				E3B87C8A2BE3EAA5009A6DFD /* Preview Content */,
@@ -408,11 +414,13 @@
 				E3741ABF2BE573B800697F5F /* SideMenuOptionModel.swift in Sources */,
 				E3B87C872BE3EAA2009A6DFD /* ContentView.swift in Sources */,
 				E3741AC12BE574B800697F5F /* SideMenuView.swift in Sources */,
+				E3D04EAB2BE99D4800ABB22B /* TicketService.swift in Sources */,
 				E3741AB82BE4334000697F5F /* MainTicketViewModel.swift in Sources */,
 				E3741A902BE3EF5700697F5F /* User.swift in Sources */,
 				E3741AD32BE5ED9800697F5F /* SideMenuHeaderView.swift in Sources */,
 				E3741AC32BE57ADE00697F5F /* MainTabView.swift in Sources */,
 				E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */,
+				E3D04EAD2BE9ADCC00ABB22B /* CreateTicketViewModel.swift in Sources */,
 				E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */,
 				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
 				E3741ABA2BE44ACD00697F5F /* UserService.swift in Sources */,

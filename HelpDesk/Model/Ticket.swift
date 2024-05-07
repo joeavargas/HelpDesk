@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestoreSwift
 
-struct Ticket: Codable {
-    var ticketId = UUID().uuidString
+struct Ticket: Codable, Identifiable, Hashable {
+    @DocumentID var ticketId: String?
     let title: String
-    let subTitle: String
     let description: String
-    let dateCreated: Date
-    let dueDate: Date?
-    let createdBy: User
+    let dateCreated: Timestamp
+    let dueDate: Date
+    let uid: String
+}
+extension Ticket {
+    var id: String {
+        return ticketId ?? NSUUID().uuidString
+    }
 }

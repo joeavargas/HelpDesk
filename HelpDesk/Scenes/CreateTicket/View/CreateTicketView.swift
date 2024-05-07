@@ -9,18 +9,16 @@ import SwiftUI
 
 struct CreateTicketView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var titleText = ""
-    @State private var ticketDescription = ""
-    @State private var dueDate = Date.now
+    @StateObject var viewModel = CreateTicketViewModel()
     @State private var isSubmitButtonEnabled: Bool = false
     
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    TextField("Enter a brief desciption", text: $titleText)
-                        .onChange(of: titleText) { _, newValue in
-                            updateSubmitButtonState()
+                    TextField("Enter a brief desciption", text: $viewModel.ticketTitle)
+                        .onChange(of: viewModel.ticketTitle) { _, newValue in
+                            viewModel.updateSubmitButtonState()
                         }
                 } header: {
                     HStack {
@@ -32,9 +30,9 @@ struct CreateTicketView: View {
                 }
                 
                 Section {
-                    TextField("Enter description", text: $ticketDescription)
-                        .onChange(of: ticketDescription) { _, newValue in
-                            updateSubmitButtonState()
+                    TextField("Enter description", text: $viewModel.ticketDescription)
+                        .onChange(of: viewModel.ticketDescription) { _, newValue in
+                            viewModel.updateSubmitButtonState()
                         }
                 } header: {
                     HStack {
@@ -46,7 +44,7 @@ struct CreateTicketView: View {
                 }
                 
                 Section {
-                    DatePicker("Due Date", selection: $dueDate, in: Date.now...)
+                    DatePicker("Due Date", selection: $viewModel.dueDate, in: Date.now...)
                 } header: {
                     HStack {
                         Text("(optional)")
@@ -57,7 +55,7 @@ struct CreateTicketView: View {
                 Section {
                     Button(action: {}){
                         Button(action: {
-                            print("DEBUG: submit ticket")
+                            viewModel.submitTicket()
                         }, label: {
                             Text("Submit")
                                 .foregroundStyle(.white)
@@ -72,7 +70,7 @@ struct CreateTicketView: View {
                     .buttonStyle(.plain)
                     .listRowBackground(EmptyView())
                     .listRowInsets(EdgeInsets())
-                    .disabled(!isSubmitButtonEnabled)
+                    .disabled(!viewModel.updateButtonState)
                 }
             }
             .toolbar {
@@ -83,10 +81,6 @@ struct CreateTicketView: View {
                 }
         }
         }
-    }
-    
-    private func updateSubmitButtonState() {
-        isSubmitButtonEnabled = !titleText.isEmpty && !ticketDescription.isEmpty
     }
 }
 
