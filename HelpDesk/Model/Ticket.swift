@@ -10,16 +10,11 @@ import Firebase
 import FirebaseFirestoreSwift
 
 struct Ticket: Codable, Identifiable, Hashable {
-    @DocumentID var ticketId: String?
+    @DocumentID var id: String?
     let title: String
     let description: String
     let dateCreated: Timestamp
     let dueDate: Date
     let createdBy: String
     let uid: String
-}
-extension Ticket {
-    var id: String {
-        return ticketId ?? NSUUID().uuidString
-    }
 }

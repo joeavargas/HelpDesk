@@ -17,8 +17,7 @@ struct TicketService {
         
         let ticketsRef = ticketsCollection.document(ticketId)
         
-        let ticket = Ticket(ticketId: ticketId,
-                            title: ticketTitle,
+        let ticket = Ticket(title: ticketTitle,
                             description: description,
                             dateCreated: Timestamp(),
                             dueDate: dueDate, 
