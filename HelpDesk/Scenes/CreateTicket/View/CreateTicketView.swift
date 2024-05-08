@@ -56,6 +56,7 @@ struct CreateTicketView: View {
                     Button(action: {}){
                         Button(action: {
                             viewModel.submitTicket()
+                            dismiss()
                         }, label: {
                             Text("Submit")
                                 .foregroundStyle(.white)
