@@ -15,6 +15,7 @@ struct Ticket: Codable, Identifiable, Hashable {
     let description: String
     let dateCreated: Timestamp
     let dueDate: Date
+    let createdBy: String
     let uid: String
 }
 extension Ticket {
