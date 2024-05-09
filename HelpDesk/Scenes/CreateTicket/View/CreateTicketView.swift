@@ -44,7 +44,7 @@ struct CreateTicketView: View {
                 }
                 
                 Section {
-                    DatePicker("Due Date", selection: $viewModel.dueDate, in: Date.now...)
+                    DatePicker("Due Date", selection: $viewModel.dueDate, in: Date.threeDaysFromNow..., displayedComponents: .date)
                 } header: {
                     HStack {
                         Text("(optional)")

@@ -10,7 +10,7 @@ import Foundation
 class CreateTicketViewModel: ObservableObject {
     @Published var ticketTitle = ""
     @Published var ticketDescription = ""
-    @Published var dueDate: Date = Date()
+    @Published var dueDate: Date = .threeDaysFromNow
     
     @Published var updateButtonState: Bool = false
     

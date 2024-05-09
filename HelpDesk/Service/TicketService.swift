@@ -20,7 +20,7 @@ struct TicketService {
         let ticket = Ticket(title: ticketTitle,
                             description: description,
                             dateCreated: Timestamp(),
-                            dueDate: dueDate, 
+                            dueDate: dueDate,
                             createdBy: currentUser.displayName,
                             uid: currentUser.id )
         

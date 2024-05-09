@@ -39,6 +39,7 @@
 		E3B87C8C2BE3EAA5009A6DFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B87C8B2BE3EAA5009A6DFD /* Preview Assets.xcassets */; };
 		E3D04EAB2BE99D4800ABB22B /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D04EAA2BE99D4800ABB22B /* TicketService.swift */; };
 		E3D04EAD2BE9ADCC00ABB22B /* CreateTicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D04EAC2BE9ADCC00ABB22B /* CreateTicketViewModel.swift */; };
+		E3D04EB02BEC608F00ABB22B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D04EAF2BEC608E00ABB22B /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		E3B87C8B2BE3EAA5009A6DFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3D04EAA2BE99D4800ABB22B /* TicketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 		E3D04EAC2BE9ADCC00ABB22B /* CreateTicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTicketViewModel.swift; sourceTree = "<group>"; };
+		E3D04EAF2BEC608E00ABB22B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 		E3B87C832BE3EAA2009A6DFD /* HelpDesk */ = {
 			isa = PBXGroup;
 			children = (
+				E3D04EAE2BEC608000ABB22B /* Extensions */,
 				E3741A8A2BE3EBBE00697F5F /* App */,
 				E3741A8C2BE3EBF000697F5F /* Model */,
 				E3741A8B2BE3EBCC00697F5F /* Scenes */,
@@ -329,6 +332,14 @@
 				E3B87C8B2BE3EAA5009A6DFD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E3D04EAE2BEC608000ABB22B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3D04EAF2BEC608E00ABB22B /* Date.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +433,7 @@
 				E3B87C852BE3EAA2009A6DFD /* HelpDeskApp.swift in Sources */,
 				E3D04EAD2BE9ADCC00ABB22B /* CreateTicketViewModel.swift in Sources */,
 				E3741AAB2BE426AA00697F5F /* AuthService.swift in Sources */,
+				E3D04EB02BEC608F00ABB22B /* Date.swift in Sources */,
 				E3741A952BE3F8C900697F5F /* LoginView.swift in Sources */,
 				E3741ABA2BE44ACD00697F5F /* UserService.swift in Sources */,
 				E3741AD12BE58C1800697F5F /* SideMenuViewModel.swift in Sources */,
